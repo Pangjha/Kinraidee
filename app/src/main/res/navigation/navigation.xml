@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/titleFragment">
+
+    <fragment
+        android:id="@+id/titleFragment"
+        android:name="com.android.example.kinrai.TitleFragment"
+        android:label="TitleFragment" >
+        <action
+            android:id="@+id/action_titleFragment_to_randomFragment"
+            app:destination="@id/randomFragment" />
+        <action
+            android:id="@+id/action_titleFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/randomFragment"
+        android:name="com.android.example.kinrai.randomFragment"
+        android:label="fragment_random"
+        tools:layout="@layout/fragment_random" />
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.android.example.kinrai.listFragment"
+        android:label="fragment_list"
+        tools:layout="@layout/fragment_list" />
+</navigation>

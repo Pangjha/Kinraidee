@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+tools:context=".randomFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/randomFragmentConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/wallkinraidee">
+
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="141dp"
+            android:layout_height="115dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/randombut"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="273dp"
+            android:layout_height="233dp"
+            android:layout_marginTop="64dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logokinrai" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="276dp"
+            android:layout_height="51dp"
+            android:background="@android:color/background_light"
+            android:fontFamily="@font/thnew"
+            android:text="@string/list01"
+            android:textAlignment="center"
+
+            android:textColor="@android:color/primary_text_light"
+            android:textSize="36sp"
+            app:layout_constraintBottom_toTopOf="@+id/button2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.481"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2"
+            app:layout_constraintVertical_bias="0.462" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

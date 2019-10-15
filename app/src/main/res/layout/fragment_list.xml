@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".listFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/listConstraint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/wallkinraidee">
+
+
+<!--        <ListView-->
+<!--            android:id="@+id/list_food_view"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="0dp"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.0"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintVertical_bias="0.0">-->
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="194dp"
+            android:layout_height="91dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logokinrai" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="190dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/thsarabun"
+            android:text="รายชื่อร้านค้า"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.511"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+        <!--        </ListView>-->
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
