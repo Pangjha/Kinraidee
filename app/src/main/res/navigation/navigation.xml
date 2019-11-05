@@ -25,5 +25,22 @@
         android:id="@+id/listFragment"
         android:name="com.android.example.kinrai.listFragment"
         android:label="fragment_list"
-        tools:layout="@layout/fragment_list" />
+        tools:layout="@layout/fragment_list" >
+        <action
+            android:id="@+id/action_listFragment_to_addname"
+            app:destination="@id/addname" />
+        <action
+            android:id="@+id/action_listFragment_to_map"
+            app:destination="@id/map" />
+    </fragment>
+    <fragment
+        android:id="@+id/addname"
+        android:name="com.android.example.kinrai.addname"
+        android:label="fragment_addname"
+        tools:layout="@layout/fragment_addname" />
+    <fragment
+        android:id="@+id/map"
+        android:name="com.android.example.kinrai.map"
+        android:label="fragment_map"
+        tools:layout="@layout/fragment_map" />
 </navigation>

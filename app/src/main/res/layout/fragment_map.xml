@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".listFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/listConstraint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/wallkinraidee">
+        <!--        </ListView>-->
+
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/mapView"
+            android:layout_width="296dp"
+            android:layout_height="272dp"
+            tools:layout_editor_absoluteX="58dp"
+            tools:layout_editor_absoluteY="222dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -25,6 +25,7 @@
             android:id="@+id/toListButton"
             android:layout_width="200dp"
             android:layout_height="125dp"
+            android:layout_marginBottom="24dp"
             android:background="@drawable/listbutton"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

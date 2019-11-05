@@ -14,7 +14,7 @@ tools:context=".randomFragment">
 
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/randomButton"
             android:layout_width="141dp"
             android:layout_height="115dp"
             android:layout_marginBottom="32dp"
@@ -47,7 +47,7 @@ tools:context=".randomFragment">
 
             android:textColor="@android:color/primary_text_light"
             android:textSize="36sp"
-            app:layout_constraintBottom_toTopOf="@+id/button2"
+            app:layout_constraintBottom_toTopOf="@+id/randomButton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.481"
             app:layout_constraintStart_toStartOf="parent"

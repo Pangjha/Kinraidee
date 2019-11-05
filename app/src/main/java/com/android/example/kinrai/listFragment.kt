@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.ListView
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
 import com.android.example.kinrai.databinding.FragmentListBinding
 import com.android.example.kinrai.databinding.FragmentRandomBinding
 
@@ -26,6 +27,9 @@ class listFragment : Fragment() {
     ): View? {
         val binding = DataBindingUtil.inflate<FragmentListBinding>(inflater,
             R.layout.fragment_list,container,false)
+
+        binding.toAddButton.setOnClickListener{view : View ->
+            view.findNavController().navigate(R.id.action_listFragment_to_addname)}
 
       /*  val adapter = ArrayAdapter(this,R.layout.fragment_list,array)
         val listView: ListView = find
