@@ -3,7 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".listFragment">
+    tools:context=".listFragment"
+    >
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/listConstraint"
@@ -70,15 +71,32 @@
 
         <Button
             android:id="@+id/button2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/AppTheme.RoundedCornerMaterialButton"
+            android:layout_width="121dp"
+            android:layout_height="113dp"
+            android:layout_marginTop="16dp"
             android:layout_marginBottom="50dp"
-            android:background="@android:color/holo_green_light"
-            android:text="@android:string/ok"
+            android:background="@drawable/ok"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/addStoreText" />
+            app:layout_constraintTop_toBottomOf="@+id/addImg" />
+
+        <Button
+            android:id="@+id/addImg"
+            style="@style/AppTheme.RoundedCornerMaterialButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:background="@drawable/upload01"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/uploade"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addStoreText"
+            app:layout_constraintVertical_bias="0.18" />
 
 
         <!--        </ListView>-->
