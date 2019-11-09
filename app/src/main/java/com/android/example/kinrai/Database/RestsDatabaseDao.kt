@@ -38,9 +38,18 @@ interface RestsDatabaseDao {
     @Query("DELETE FROM rests_table")
     fun clear()
 
+    @Query("DELETE FROM rests_table WHERE name = :name")
+    fun remove(name: String)
+
     @Query("SELECT * FROM rests_table ORDER BY restId DESC LIMIT 1")
     fun getToRest(): Resterant?
 
     @Query("SELECT * FROM rests_table ORDER BY restId DESC")
     fun getAllRests(): LiveData<List<Resterant>>
+
+    @Query("SELECT name FROM rests_table ORDER BY restId DESC")
+    fun getArray(): Array<String>
+
+
+
 }

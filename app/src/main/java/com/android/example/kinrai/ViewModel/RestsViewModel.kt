@@ -2,6 +2,7 @@ package com.android.example.kinrai
 
 import android.app.Application
 import android.util.Log
+import android.widget.ArrayAdapter
 import androidx.lifecycle.ViewModel
 import com.android.example.kinrai.Database.RestsDatabaseDao
 
@@ -14,16 +15,13 @@ class RestsViewModel(dataSource: RestsDatabaseDao, application: Application) : V
 
 
     val database = dataSource
-
-
     private val viewModelJob = Job()
 
 
     private val uiScope = CoroutineScope(Dispatchers.Main + viewModelJob)
-
-
-
     val rests = database.getAllRests()
+    var arr : Array<String> = emptyArray()
+
 
     init {
 
@@ -34,7 +32,7 @@ class RestsViewModel(dataSource: RestsDatabaseDao, application: Application) : V
 
     private fun initializeRests() {
         uiScope.launch {
-//            tonight.value = getCardFromDatabase()
+            arr = database.getArray()
         }
     }
 
@@ -51,6 +49,12 @@ class RestsViewModel(dataSource: RestsDatabaseDao, application: Application) : V
         }
     }
 
+    private suspend fun getArrayAll() {
+        withContext(Dispatchers.IO) {
+            database.getArray()
+        }
+    }
+
     fun addRest(rest:Resterant){
         uiScope.launch {
 
@@ -58,6 +62,9 @@ class RestsViewModel(dataSource: RestsDatabaseDao, application: Application) : V
 
         }
     }
+
+
+
 
     fun clearAllRest(){
         uiScope.launch {

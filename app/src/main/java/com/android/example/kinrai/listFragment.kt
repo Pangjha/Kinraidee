@@ -44,7 +44,7 @@ class listFragment : Fragment() {
             ViewModelProviders.of(
                 this, viewModelFactory).get(RestsViewModel::class.java)
         //Clear data = uncomment
-        RestsViewModel.clearAllRest()
+//        RestsViewModel.clearAllRest()
 
         val listAdapter = context?.let { listAdapter(it) }
         RestsViewModel.rests.observe(this, Observer { rests ->
@@ -63,23 +63,19 @@ class listFragment : Fragment() {
 
         binding.listResturant.adapter = listAdapter
 
-        var name = arguments?.get("name")
-        var image = arguments?.get("photo")
-//        var name = arguments!!["name"].toString()
-//        var image = arguments!!["image"].toString()
-        Log.i("ListFragment", name.toString())
-        Log.i("ListFragment", image.toString())
-        if(!name.toString().isNullOrEmpty()){
-            if (image?.toString().isNullOrEmpty()){
-                RestsViewModel.addRest(Resterant(0,name.toString(), image.toString().toByteArray()))
-                Log.i("ListFragment", "Added Resterant")
-            }else{
-                RestsViewModel.addRest(Resterant(0,name.toString(), image.toString().toByteArray()))
-                Log.i("ListFragment", "Added Resterant")
-            }
+        var name = arguments?.get("name").toString()
 
+
+        if(!name.isNullOrEmpty() && !name.equals("null") && name.isNotEmpty() && name.isNotBlank()){
+            var newRest = Resterant(0,name, "".toByteArray())
+            Log.i("ListFragment", newRest.toString())
+            RestsViewModel.addRest(newRest)
+            Log.i("ListFragment", "Added Resterant")
         }
 
+        binding.backtotitle.setOnClickListener {
+            view?.findNavController()?.navigate(R.id.action_listFragment_to_titleFragment)
+        }
         return binding.root
     }
 

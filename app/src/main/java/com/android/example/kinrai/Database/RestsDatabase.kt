@@ -28,6 +28,7 @@ abstract class RestsDatabase : RoomDatabase() {
                         "rests_history_database"
                     )
                         .fallbackToDestructiveMigration()
+                        .allowMainThreadQueries()
                         .build()
                     INSTANCE = instance
                 }
